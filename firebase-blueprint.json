@@ -1,0 +1,127 @@
+{
+  "entities": {
+    "Product": {
+      "title": "Product",
+      "description": "Artisanal candle, soap, sanctuary candle, or souvenir favor product",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique product ID" },
+        "name": { "type": "string", "maxLength": 150, "description": "Product display name" },
+        "slug": { "type": "string", "maxLength": 150, "description": "URL slug" },
+        "description": { "type": "string", "maxLength": 4000, "description": "Full product description" },
+        "price": { "type": "number", "description": "Price in BRL" },
+        "originalPrice": { "type": "number", "description": "Optional original price before discount" },
+        "stock": { "type": "number", "description": "Available stock quantity" },
+        "category": { "type": "string", "maxLength": 50, "description": "Category identifier" },
+        "tags": { "type": "array", "description": "Search and filter tags" },
+        "weight": { "type": "number", "description": "Weight in grams for shipping calculation" },
+        "images": { "type": "array", "description": "List of image URLs" },
+        "scents": { "type": "string", "maxLength": 300, "description": "Olfactory notes and fragrance description" },
+        "burnTime": { "type": "string", "maxLength": 100, "description": "Burn time in hours" },
+        "ingredients": { "type": "string", "maxLength": 500, "description": "Ingredients used (e.g. cera de coco, pavio 100% algodão)" },
+        "isFeatured": { "type": "boolean", "description": "Whether highlighted on home page" },
+        "isActive": { "type": "boolean", "description": "Whether available for purchase" },
+        "createdAt": { "type": "string", "description": "Creation timestamp ISO string" },
+        "updatedAt": { "type": "string", "description": "Last update timestamp ISO string" }
+      },
+      "required": ["name", "slug", "price", "stock", "category", "isActive"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer purchase order",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique order ID" },
+        "orderNumber": { "type": "string", "maxLength": 32, "description": "Readable order identifier" },
+        "customerName": { "type": "string", "maxLength": 120, "description": "Customer full name" },
+        "customerPhone": { "type": "string", "maxLength": 30, "description": "Customer WhatsApp phone number" },
+        "customerEmail": { "type": "string", "maxLength": 120, "description": "Customer email" },
+        "address": { "type": "object", "description": "Shipping address" },
+        "items": { "type": "array", "description": "List of ordered items" },
+        "subtotal": { "type": "number", "description": "Sum of item prices" },
+        "shippingCost": { "type": "number", "description": "Shipping fee in BRL" },
+        "shippingMethod": { "type": "string", "maxLength": 50, "description": "PAC, SEDEX, or Retirada" },
+        "discount": { "type": "number", "description": "Applied discount in BRL" },
+        "couponCode": { "type": "string", "maxLength": 30, "description": "Applied coupon code" },
+        "total": { "type": "number", "description": "Grand total in BRL" },
+        "paymentMethod": { "type": "string", "maxLength": 50, "description": "Payment method (Pix, Cartão, Dinheiro)" },
+        "status": { "type": "string", "enum": ["pendente", "pago", "enviado", "entregue", "cancelado"], "description": "Order fulfillment status" },
+        "notes": { "type": "string", "maxLength": 1000, "description": "Customer or order notes" },
+        "trackingCode": { "type": "string", "maxLength": 50, "description": "Correios tracking code" },
+        "createdAt": { "type": "string", "description": "Creation timestamp ISO string" }
+      },
+      "required": ["orderNumber", "customerName", "customerPhone", "items", "subtotal", "total", "status"]
+    },
+    "Coupon": {
+      "title": "Coupon",
+      "description": "Discount coupon",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique coupon ID" },
+        "code": { "type": "string", "maxLength": 30, "description": "Coupon promo code in uppercase" },
+        "type": { "type": "string", "enum": ["percentage", "fixed"], "description": "Type of discount" },
+        "value": { "type": "number", "description": "Percentage (0-100) or fixed amount in BRL" },
+        "minOrderValue": { "type": "number", "description": "Minimum subtotal required to apply" },
+        "maxUses": { "type": "number", "description": "Maximum allowed uses" },
+        "currentUses": { "type": "number", "description": "Count of times used" },
+        "validUntil": { "type": "string", "description": "Expiration date" },
+        "isActive": { "type": "boolean", "description": "Whether coupon is currently active" }
+      },
+      "required": ["code", "type", "value", "isActive"]
+    },
+    "CustomQuote": {
+      "title": "CustomQuote",
+      "description": "Custom party favor budget request (15 anos, wedding, etc.)",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Quote ID" },
+        "name": { "type": "string", "maxLength": 120, "description": "Requester name" },
+        "phone": { "type": "string", "maxLength": 30, "description": "WhatsApp contact" },
+        "email": { "type": "string", "maxLength": 120, "description": "Email address" },
+        "eventType": { "type": "string", "maxLength": 50, "description": "Event type (15 Anos, Casamento, etc.)" },
+        "quantity": { "type": "number", "description": "Approximate pieces quantity" },
+        "eventDate": { "type": "string", "maxLength": 50, "description": "Planned event date" },
+        "customization": { "type": "string", "maxLength": 1000, "description": "Customization requests (names, colors, scents)" },
+        "status": { "type": "string", "enum": ["novo", "em_atendimento", "finalizado"], "description": "Lead status" },
+        "createdAt": { "type": "string", "description": "Creation timestamp ISO string" }
+      },
+      "required": ["name", "phone", "eventType", "quantity"]
+    },
+    "SiteSettings": {
+      "title": "SiteSettings",
+      "description": "Store configuration and content settings",
+      "type": "object",
+      "properties": {
+        "heroTitle": { "type": "string", "maxLength": 150, "description": "Hero section title" },
+        "heroSubtitle": { "type": "string", "maxLength": 300, "description": "Hero section subtitle" },
+        "announcement": { "type": "string", "maxLength": 200, "description": "Top announcement bar message" },
+        "instagram": { "type": "string", "maxLength": 100, "description": "Instagram handle" },
+        "whatsapp": { "type": "string", "maxLength": 30, "description": "WhatsApp number" },
+        "originCep": { "type": "string", "maxLength": 15, "description": "Origin CEP for freight calculation" },
+        "freeShippingThreshold": { "type": "number", "description": "Minimum cart value for free shipping" }
+      }
+    }
+  },
+  "firestore": {
+    "/products/{productId}": {
+      "schema": "Product",
+      "description": "Collection of catalog products"
+    },
+    "/orders/{orderId}": {
+      "schema": "Order",
+      "description": "Collection of customer orders"
+    },
+    "/coupons/{couponId}": {
+      "schema": "Coupon",
+      "description": "Discount vouchers and promo codes"
+    },
+    "/custom_quotes/{quoteId}": {
+      "schema": "CustomQuote",
+      "description": "Lembrancinhas quote requests"
+    },
+    "/site_settings/general": {
+      "schema": "SiteSettings",
+      "description": "General store configurations"
+    }
+  }
+}

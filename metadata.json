@@ -1,0 +1,7 @@
+{
+  "name": "Luz & Essência Artesanal",
+  "description": "E-commerce de velas aromáticas artesanais, sabonetes feitos à mão, velas de santuário e lembrancinhas personalizadas da Elaine em Enéas Marques - PR.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
