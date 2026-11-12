@@ -288,7 +288,7 @@ export const SommelierModal: React.FC<SommelierModalProps> = ({
               {recommendedProduct && (
                 <div className="p-4 bg-white rounded-2xl border border-[#ECE4D6] shadow-sm flex flex-col sm:flex-row items-center gap-4">
                   <img
-                    src={recommendedProduct.images[0] || '/src/assets/images/vela_aromatica_manga_1794485801864.jpg'}
+                    src={recommendedProduct.images[0] || '/images/vela_aromatica_manga_1794485801864.jpg'}
                     alt={recommendedProduct.name}
                     className="w-24 h-24 rounded-xl object-cover bg-[#FAF7F2] shrink-0"
                   />

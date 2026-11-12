@@ -197,7 +197,7 @@ export const AdminPDV: React.FC<AdminPDVProps> = ({ products, onOrderCompleted }
                 <div>
                   <div className="aspect-square rounded-lg overflow-hidden bg-[#FAF7F2] mb-2">
                     <img
-                      src={p.images[0] || '/src/assets/images/vela_aromatica_manga_1794485801864.jpg'}
+                      src={p.images[0] || '/images/vela_aromatica_manga_1794485801864.jpg'}
                       alt=""
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                     />

@@ -72,7 +72,7 @@ export async function saveProduct(product: Partial<Product> & { name: string; pr
       categoryLabel: product.categoryLabel,
       tags: product.tags || [],
       weight: Number(product.weight ?? 350),
-      images: product.images && product.images.length > 0 ? product.images : ['/src/assets/images/vela_aromatica_manga_1794485801864.jpg'],
+      images: product.images && product.images.length > 0 ? product.images : ['/images/vela_aromatica_manga_1794485801864.jpg'],
       scents: product.scents || '',
       burnTime: product.burnTime || '',
       ingredients: product.ingredients || '',

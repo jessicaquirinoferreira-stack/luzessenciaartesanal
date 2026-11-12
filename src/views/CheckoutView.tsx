@@ -597,7 +597,7 @@ export const CheckoutView: React.FC<CheckoutViewProps> = ({ onBack, onOrderSucce
                   <div key={item.product.id} className="py-2.5 flex items-center justify-between text-xs">
                     <div className="flex items-center gap-2.5 min-w-0 pr-2">
                       <img
-                        src={item.product.images[0] || '/src/assets/images/vela_aromatica_manga_1794485801864.jpg'}
+                        src={item.product.images[0] || '/images/vela_aromatica_manga_1794485801864.jpg'}
                         alt=""
                         className="w-10 h-10 rounded-lg object-cover bg-[#F4EFE6] shrink-0"
                       />

@@ -111,7 +111,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
               >
                 <div className="flex items-center gap-3 min-w-0 pr-2">
                   <img
-                    src={prod.images[0] || '/src/assets/images/vela_aromatica_manga_1794485801864.jpg'}
+                    src={prod.images[0] || '/images/vela_aromatica_manga_1794485801864.jpg'}
                     alt=""
                     className="w-12 h-12 rounded-xl object-cover bg-[#F4EFE6] shrink-0"
                   />

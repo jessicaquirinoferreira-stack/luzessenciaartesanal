@@ -88,7 +88,7 @@ export const ProductDetailView: React.FC<ProductDetailViewProps> = ({
 
   const images = product.images && product.images.length > 0 
     ? product.images 
-    : ['/src/assets/images/vela_aromatica_manga_1794485801864.jpg'];
+    : ['/images/vela_aromatica_manga_1794485801864.jpg'];
 
   const relatedProducts = allProducts
     .filter(p => p.id !== product.id && (p.category === product.category || p.isFeatured))

@@ -27,11 +27,11 @@ export const AdminProducts: React.FC<AdminProductsProps> = ({ products, onProduc
   const [isSaving, setIsSaving] = useState(false);
 
   const brandImagePresets = [
-    { label: 'Vela Manga Verde (Travertino)', url: '/src/assets/images/vela_aromatica_manga_1794485801864.jpg' },
-    { label: 'Vela Santuário Maria (Ouro & Azul)', url: '/src/assets/images/vela_santuario_maria_1794485802727.jpg' },
-    { label: 'Sabonete Alecrim & Sal Grosso', url: '/src/assets/images/sabonete_alecrim_sal_1794485803465.jpg' },
-    { label: 'Lembrancinhas 15 Anos Rosé & Coroa', url: '/src/assets/images/lembrancinhas_festa_1794485803571.jpg' },
-    { label: 'Ateliê / Velas Aconchego', url: '/src/assets/images/hero_luz_essencia_1794485802025.jpg' },
+    { label: 'Vela Manga Verde (Travertino)', url: '/images/vela_aromatica_manga_1794485801864.jpg' },
+    { label: 'Vela Santuário Maria (Ouro & Azul)', url: '/images/vela_santuario_maria_1794485802727.jpg' },
+    { label: 'Sabonete Alecrim & Sal Grosso', url: '/images/sabonete_alecrim_sal_1794485803465.jpg' },
+    { label: 'Lembrancinhas 15 Anos Rosé & Coroa', url: '/images/lembrancinhas_festa_1794485803571.jpg' },
+    { label: 'Ateliê / Velas Aconchego', url: '/images/hero_luz_essencia_1794485802025.jpg' },
   ];
 
   const filtered = products.filter(p => {
@@ -55,7 +55,7 @@ export const AdminProducts: React.FC<AdminProductsProps> = ({ products, onProduc
       categoryLabel: 'Velas Aromáticas',
       tags: ['Artesanal'],
       weight: 380,
-      images: ['/src/assets/images/vela_aromatica_manga_1794485801864.jpg'],
+      images: ['/images/vela_aromatica_manga_1794485801864.jpg'],
       scents: 'Notas de Saída: ... Notas de Corpo: ...',
       burnTime: 'Aprox. 40 horas',
       ingredients: 'Cera 100% vegetal de coco, essência premium, pavio de algodão.',
@@ -173,7 +173,7 @@ export const AdminProducts: React.FC<AdminProductsProps> = ({ products, onProduc
                 <tr key={prod.id} className="hover:bg-[#FAF7F2] transition-colors">
                   <td className="py-3 px-4 flex items-center gap-3">
                     <img
-                      src={prod.images[0] || '/src/assets/images/vela_aromatica_manga_1794485801864.jpg'}
+                      src={prod.images[0] || '/images/vela_aromatica_manga_1794485801864.jpg'}
                       alt=""
                       className="w-10 h-10 rounded-lg object-cover bg-[#F4EFE6] shrink-0"
                     />

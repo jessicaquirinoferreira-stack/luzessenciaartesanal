@@ -38,7 +38,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onSelect }) =
         {/* Product Image Showcase */}
         <div className="relative aspect-[4/3] bg-[#F7F3ED] overflow-hidden">
           <img
-            src={product.images[0] || '/src/assets/images/vela_aromatica_manga_1794485801864.jpg'}
+            src={product.images[0] || '/images/vela_aromatica_manga_1794485801864.jpg'}
             alt={product.name}
             loading="lazy"
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"

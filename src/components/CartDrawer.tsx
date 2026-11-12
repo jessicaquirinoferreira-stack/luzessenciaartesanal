@@ -103,7 +103,7 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ onCheckout, onBrowse }) 
                 <div key={item.product.id} className="py-4 flex gap-4 items-start">
                   <div className="w-20 h-20 bg-[#F4EFE6] rounded-lg overflow-hidden shrink-0 border border-[#ECE4D6]">
                     <img
-                      src={item.product.images[0] || '/src/assets/images/vela_aromatica_manga_1794485801864.jpg'}
+                      src={item.product.images[0] || '/images/vela_aromatica_manga_1794485801864.jpg'}
                       alt={item.product.name}
                       className="w-full h-full object-cover"
                       referrerPolicy="no-referrer"

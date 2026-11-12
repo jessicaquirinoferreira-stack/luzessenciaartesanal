@@ -29,25 +29,25 @@ export const HomeView: React.FC<HomeViewProps> = ({
       id: 'velas-aromaticas',
       title: 'Velas Aromáticas',
       desc: 'Cera 100% de coco & aromas envolventes',
-      image: '/src/assets/images/vela_aromatica_manga_1794485801864.jpg',
+      image: '/images/vela_aromatica_manga_1794485801864.jpg',
     },
     {
       id: 'velas-santuario',
       title: 'Velas de Santuário',
       desc: 'Devoção, fé, proteção e acabamento em ouro',
-      image: '/src/assets/images/vela_santuario_maria_1794485802727.jpg',
+      image: '/images/vela_santuario_maria_1794485802727.jpg',
     },
     {
       id: 'sabonetes-artesanais',
       title: 'Sabonetes Feitos à Mão',
       desc: 'Alecrim, arruda, sal grosso & hidratação pura',
-      image: '/src/assets/images/sabonete_alecrim_sal_1794485803465.jpg',
+      image: '/images/sabonete_alecrim_sal_1794485803465.jpg',
     },
     {
       id: 'lembrancinhas',
       title: 'Lembrancinhas 15 Anos',
       desc: 'Mini velas com laço e coroa para celebrações',
-      image: '/src/assets/images/lembrancinhas_festa_1794485803571.jpg',
+      image: '/images/lembrancinhas_festa_1794485803571.jpg',
     },
   ];
 
@@ -145,7 +145,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
               <TiltCard maxTilt={4} scale={1.01}>
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-[#ECE4D6] aspect-[16/10] bg-[#F4EFE6]">
                   <img
-                    src="/src/assets/images/hero_luz_essencia_1794485802025.jpg"
+                    src="/images/hero_luz_essencia_1794485802025.jpg"
                     alt="Velas artesanais acesas do Ateliê Luz & Essência"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
@@ -436,7 +436,7 @@ export const HomeView: React.FC<HomeViewProps> = ({
             <div className="lg:col-span-4">
               <div className="rounded-2xl overflow-hidden shadow-lg border border-[#ECE4D6] aspect-square">
                 <img
-                  src="/src/assets/images/lembrancinhas_festa_1794485803571.jpg"
+                  src="/images/lembrancinhas_festa_1794485803571.jpg"
                   alt="Lembrancinhas de 15 anos personalizadas com coroa dourada"
                   loading="lazy"
                   className="w-full h-full object-cover"

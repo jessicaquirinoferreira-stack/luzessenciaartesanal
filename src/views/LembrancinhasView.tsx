@@ -101,7 +101,7 @@ export const LembrancinhasView: React.FC = () => {
         <div className="lg:col-span-6 space-y-6">
           <div className="rounded-3xl overflow-hidden shadow-xl border border-[#ECE4D6] aspect-[4/3] bg-white">
             <img
-              src="/src/assets/images/lembrancinhas_festa_1794485803571.jpg"
+              src="/images/lembrancinhas_festa_1794485803571.jpg"
               alt="Lembrancinhas de 15 anos personalizadas com laço rosé e coroa"
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
